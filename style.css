@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    margin: 40px; 
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    width: 600px;
+    height: 600px;
+    border-width: 1px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell:hover {
+    background-color: grey;
+}
