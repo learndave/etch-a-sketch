@@ -11,8 +11,22 @@
     <div class="title">Etch-A-Sketch</div>
     <div class="body">
         <div class="settings">
-            <input type="color" name="brushColor" id="brushColor">
-            <input type="range" id="gridSize" min="4" max="100" step="1">
+            <div class="setting brushColor">
+                Brush Color
+                <input type="color" id="brushColor">
+            </div>      
+            <div class="setting opacity">
+                Opacity
+                <input type="range" id="opacity" min="0" max="100" step="5">
+            </div>
+            <div class="setting gridSize">
+                Number of Grids
+                <input type="range" id="gridSize" min="4" max="100" step="1">
+            </div>
+            <div class="setting backgroundColor">
+                Background Color
+                <input type="color" id="backgroundColor">
+            </div>
         </div>
         <div class="canvas">
         </div>

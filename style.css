@@ -31,6 +31,13 @@ body {
     justify-content: space-around;
 }
 
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
 .cell {
     user-select: none;
 }
