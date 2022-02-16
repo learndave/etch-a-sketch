@@ -3,10 +3,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #EA4C89;
+    background-color: white;
 }
 
 .body {
     display: flex;
+}
+
+.title {
+    font-size: 40px;
+    margin-top: 30px;
 }
 
 .canvas {
@@ -19,23 +27,19 @@ body {
     border-width: 1px;
 }
 
-.canvas:after {
-    content: "";
-    display: block;
-}
-
 .settings {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px
 }
 
 .setting {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .cell {
@@ -44,4 +48,43 @@ body {
 
 .cell:hover {
     background-color: lightgrey;
+}
+/* CSS */
+.button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #F082AC;
+}
+
+.caption {
+    font-size: small;
+}
+
+.input {
+    background-color: #EA4C89;
 }

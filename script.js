@@ -30,6 +30,7 @@ function clearGrid() {
 function makeGrid(size) {
     canvas.style.gridTemplateColumns = `repeat(${size},1fr)`;
     canvas.style.gridTemplateRows = `repeat(${size},1fr)`;
+    gridSizeCaption.innerHTML = `${gridSizeInput.value} x ${gridSizeInput.value}`;
     
     for (let i = 0; i < size * size; i++) {
         const cell = document.createElement("div");
@@ -42,8 +43,10 @@ function makeGrid(size) {
 }
 
 function setBrushSettings() {
+    opacityCaption.innerHTML = `${opacityInput.value}%`;
+
     brushColor = brushColorInput.value;
-    brushOpacity = opacityInput.value
+    brushOpacity = opacityInput.value;
 }
 
 function refresh() {
@@ -64,6 +67,9 @@ const brushColorInput = document.querySelector("#brushColor");
 const opacityInput = document.querySelector("#opacity");
 const gridSizeInput = document.querySelector("#gridSize");
 const backgroundColorInput = document.querySelector("#backgroundColor");
+const clearCanvasButton = document.querySelector(".clear");
+const gridSizeCaption = document.querySelector(".caption.gridSize");
+const opacityCaption = document.querySelector(".caption.opacity")
 
 // default values;
 let brushOpacity = 100;
@@ -80,6 +86,9 @@ gridSizeInput.onchange = () => refresh();
 brushColorInput.onchange = () => setBrushSettings();
 opacityInput.onchange = () => setBrushSettings();
 backgroundColorInput.onchange = () => refresh();
+clearCanvasButton.onclick = () => refresh();
+
+// update HTML captions
 
 // start
 refresh();

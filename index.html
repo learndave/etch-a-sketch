@@ -17,16 +17,19 @@
             </div>      
             <div class="setting opacity">
                 Opacity
-                <input type="range" id="opacity" min="0" max="100" step="5">
+                <input type="range" class="range" id="opacity" min="0" max="100" step="5">
+                <div class="caption opacity"></div>
             </div>
             <div class="setting gridSize">
-                Number of Grids
-                <input type="range" id="gridSize" min="4" max="100" step="1">
+                Pixel Size
+                <input type="range" class="range" id="gridSize" min="4" max="100" step="1">
+                <div class="caption gridSize"></div>
             </div>
             <div class="setting backgroundColor">
-                Background Color
+                Canvas Color
                 <input type="color" id="backgroundColor">
             </div>
+            <input type="button" class="clear button" value="Clear Canvas">
         </div>
         <div class="canvas">
         </div>
