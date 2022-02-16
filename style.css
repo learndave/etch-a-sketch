@@ -5,20 +5,36 @@ body {
     align-items: center;
 }
 
+.body {
+    display: flex;
+}
+
 .canvas {
     margin: 40px; 
-    display: flex;
-    flex-direction: column;
+    display: grid;
     border-style: solid;
-    width: 600px;
-    height: 600px;
+    position: relative;
+    width: 500px;
+    height: 500px;
     border-width: 1px;
 }
 
-.row {
+.canvas:after {
+    content: "";
+    display: block;
+}
+
+.settings {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cell {
+    user-select: none;
 }
 
 .cell:hover {
-    background-color: grey;
+    background-color: lightgrey;
 }
